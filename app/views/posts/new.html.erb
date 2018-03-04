@@ -1,2 +1,13 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h2>Dodwanie nowego wpisu</h2>
+
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= f.label :author, "Autor" %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, "Treść" %>
+    <%= f.text_field :body, class: "form-control" %>
+  </div>
+  <%= f.submit "Dodaj wpis", class: "btn btn-default" %>
+<% end %>
