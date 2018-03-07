@@ -1,0 +1,25 @@
+$primary-color: #ffe;
+$dark-color: #eaa;
+
+.container {
+  .page-header {
+   background-color: $primary-color;
+   border: 1px solid $dark-color;
+ }
+ .container .lead a {
+   color: $dark-color;
+ }
+}
+
+
+/*
+CSS
+.container .page-header {
+  background-color: #ffe;
+  border: 1px solid #eaa;
+}
+
+.container .lead a {
+  color: #eaa;
+}
+*/
