@@ -10,10 +10,16 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:notice] = "Dziękujemy za wpis"
-      redirect_to posts_path
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Dziękujemy za wpis"
+          redirect_to posts_path
+        end
+        format.js { }
+      end
+    else
+      render action: 'new'
     end
-
   end
 
   def surprise
