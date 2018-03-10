@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "twitter-bootstrap-rails"
 gem "jquery-rails"
+gem 'rails-controller-testing'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
