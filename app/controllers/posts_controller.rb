@@ -16,6 +16,10 @@ class PostsController < ApplicationController
 
   end
 
+  def surprise
+
+  end
+
   private
 
   def post_params

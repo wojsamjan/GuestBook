@@ -3,9 +3,19 @@
   <%= link_to "Dodaj własny wpis już teraz.", new_post_path %>
 </p>
 
+<div class="content-placeholder">
+  <%= link_to "Niespodzianka", surprise_posts_path, class: "btn btn-info", remote: true %>
+</div>
+
 <% @posts.each do |post| %>
   <blockquote>
     <p><%= post.body %></p>
     <footer><cite><%= post.author %></cite></footer>
   </blockquote>
 <% end %>
+
+<!-- <div class="row">
+  <div class="col-md-12">
+
+  </div>
+</div> -->
