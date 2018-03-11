@@ -31,6 +31,7 @@ gem "jquery-rails"
 gem "twitter-bootstrap-rails"
 gem 'rails-controller-testing'
 gem "letter_opener", :group => :development
+gem 'rails-i18n'
 
 gem 'jquery-turbolinks'
 
