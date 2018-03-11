@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if @post.save
       respond_to do |format|
         format.html do
-          flash[:notice] = "Dziękujemy za wpis"
+          flash[:notice] = "Dziękujemy za wpis!"
           redirect_to posts_path
         end
         format.js { }
