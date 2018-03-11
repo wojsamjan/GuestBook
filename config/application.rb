@@ -10,6 +10,9 @@ module GuestBook
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+
+    # Wykomentowane - psuło mailera albo ustawić I18n.enforce_available_locales = false:
+    I18n.enforce_available_locales = false
     config.i18n.default_locale = :pl
 
     # Settings in config/environments/* take precedence over those specified here.
