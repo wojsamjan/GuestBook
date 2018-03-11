@@ -1,20 +1,13 @@
 <p class="lead">
   <!-- <%= I18n.translate "hello" %> -->
-  <%= t "hello" %>
+  <%= t "index.hello" %>
   <%= link_to "Dodaj własny wpis już teraz.", new_post_path %>
 </p>
 
-<!-- <div class="dropdown"> -->
-<div class="btn-group">
-  <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> -->
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-    Wybierz język <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><%= link_to "PL", set_locale_path(locale: "pl") %></li>
-    <li><%= link_to "EN", set_locale_path(locale: "en") %></li>
-  </ul>
-</div>
+<ul class="dropdown-toggle">
+  <li><%= link_to "PL", set_locale_path(locale: "pl") %></li>
+  <li><%= link_to "EN", set_locale_path(locale: "en") %></li>
+</ul>
 
 <div id="content-placeholder">
   <%= link_to "Niespodzianka", surprise_posts_path, class: "btn btn-info", remote: true %>
@@ -33,12 +26,14 @@
   </div>
 </div>
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-  <span class="caret"></span></button>
+<!-- <div class="dropdown"> -->
+<div class="btn-group">
+  <!-- osobny komentarz: <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> -->
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+    <%= t "index.select_language", language: I18n.locale %> <span class="caret"></span>
+  </button>
   <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
+    <li><%= link_to "PL", set_locale_path(locale: "pl") %></li>
+    <li><%= link_to "EN", set_locale_path(locale: "en") %></li>
   </ul>
 </div>
