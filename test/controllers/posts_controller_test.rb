@@ -14,10 +14,13 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should create a post" do
-    posts_before = Post.count
-    post :create, params: { post: { author: "Autor", body: "Wpis" } }
-    posts_after = Post.count
-    assert_equal 1, posts_after - posts_before
+    assert_difference -> { Post.count }, 1 do
+      post :create, params: { post: { author: "Autor", body: "Wpis" } }
+    end
+    # posts_before = Post.count
+    # post :create, params: { post: { author: "Autor", body: "Wpis" } }
+    # posts_after = Post.count
+    # assert_equal 1, posts_after - posts_before
     assert_redirected_to posts_path
   end
 
